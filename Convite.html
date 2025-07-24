@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite de Investidura - Daniel Octoniel Adão Gil</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #c62828, #ffeb3b);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 2s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #fff;
+  }
+  .highlight {
+    font-weight: bold;
+    color: #ffeb3b;
+    animation: pulse 2s infinite;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Convite Especial 🎉</h1>
+    <p>
+      És convidado para a <span class="highlight"> Cerimonia de Investidura a Líder</span> de <br>
+      <span class="highlight">Daniel Octoniel Adão Gil</span> <br>
+      no dia <span class="highlight">26 de Julho de 2025</span>.
+    </p>
+    <p>
+      A tua presença é <span class="highlight">indispensável</span> neste momento especial.<br>
+      Contamos contigo para celebrar esta nova etapa de liderança.
+    </p>
+    
+  </div>
+<script>
+  const colors = ['#c62828', '#d32f2f', '#f9a825', '#ffeb3b'];
+  let index = 0;
+  setInterval(() => {
+    document.body.style.background = linear-gradient(135deg, ${colors[index]}, ${colors[(index+1)%colors.length]});
+    index = (index + 1) % colors.length;
+  }, 5000);
+</script>
+</body>
+</html>
